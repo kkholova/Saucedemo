@@ -26,6 +26,6 @@ public class ProductsTest extends BaseTest {
         Assert.assertEquals(productsPage.itemQuantityBadge(),"1", "Item quantity badge not counted");
         productsPage.removeItemFromProductPage("Test.allTheThings() T-Shirt (Red)");
         //TODO check that item is removed
-        Assert.assertEquals(productsPage.buttonText("Test.allTheThings() T-Shirt (Red)"),"ADD TO CART", "Button Texted still \"Removed\"");
+        Assert.assertEquals(productsPage.textOnAddOrRemoveButton("Test.allTheThings() T-Shirt (Red)"),"ADD TO CART", "Button Texted still \"Removed\"");
     }
 }

@@ -23,7 +23,7 @@ public class ProductsPage extends BasePage {
 
     }
 
-    public String buttonText(String itemName){
+    public String textOnAddOrRemoveButton(String itemName) {
         return driver.findElement(By.xpath(String.format(removeFromCartProductPageButton, itemName))).getText();
     }
 

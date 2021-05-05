@@ -6,9 +6,9 @@ import org.testng.annotations.Test;
 public class CartTest extends BaseTest {
 
     @Test
-    public void productCouldBeRemovedFromCartFromCartPage(){
+    public void productCouldBeRemovedFromCartFromCartPage() {
         loginPage.open();
-        loginPage.login(USER,PASSWORD);
+        loginPage.login(USER, PASSWORD);
         productsPage.addToCart("Test.allTheThings() T-Shirt (Red)");
         productsPage.addToCart("Sauce Labs Backpack");
         cartPage.openCartPage();
@@ -17,9 +17,9 @@ public class CartTest extends BaseTest {
     }
 
     @Test
-    public void moveToCheckOutPage(){
+    public void moveToCheckOutPage() {
         loginPage.open();
-        loginPage.login(USER,PASSWORD);
+        loginPage.login(USER, PASSWORD);
         productsPage.addToCart("Test.allTheThings() T-Shirt (Red)");
         cartPage.openCartPage();
         cartPage.goToCheckoutPage();

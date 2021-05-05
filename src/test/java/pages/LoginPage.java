@@ -10,21 +10,21 @@ public class LoginPage extends BasePage {
     public static final By ERROR_MESSAGE = By.cssSelector("[data-test = error]");
 
 
-    public LoginPage(WebDriver driver){
+    public LoginPage(WebDriver driver) {
         super(driver);
     }
 
-    public void open(){
+    public void open() {
         driver.get("https://www.saucedemo.com/");
     }
 
-    public void login(String user, String password){
+    public void login(String user, String password) {
         driver.findElement(USERNAME_INPUT).sendKeys(user);
         driver.findElement(PASSWORD_INPUT).sendKeys(password);
         driver.findElement(LOGIN_BUTTON).click();
     }
 
-    public String getErrorMessage(){
+    public String getErrorMessage() {
         return driver.findElement(ERROR_MESSAGE).getText();
 
     }
