@@ -1,5 +1,6 @@
 package tests;
 
+import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -52,4 +53,22 @@ public class CheckoutTest extends BaseTest{
         Assert.assertEquals(checkoutPage.getErrorMessage(),"Error: Postal Code is required", "Checkout without zipcode is possible");
 
     }
+
+    @Test
+    public void finishThePurchase(){
+        loginPage.open();
+        loginPage.login(USER,PASSWORD);
+        productsPage.addToCart("Test.allTheThings() T-Shirt (Red)");
+        cartPage.openCartPage();
+        cartPage.goToCheckoutPage();
+        checkoutPage.checkoutStepOne("John","shshsh","");
+        checkoutPage.goToFinishCheckoutPage();
+        Assert.assertEquals(cartPage.getTitleText(), "Checkout: Complete!", "You are not finish purchase  page");
+        checkoutPage.backToHomeButton();
+        Assert.assertEquals(cartPage.getTitleText(), "Products", "You are not on product page");
+
+    }
+
+
+
 }
