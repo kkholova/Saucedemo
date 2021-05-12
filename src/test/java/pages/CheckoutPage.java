@@ -9,6 +9,7 @@ public class CheckoutPage extends BasePage {
     public static final By ZIP_INPUT = By.id("postal-code");
     public static final By CONTINUE_BUTTON = By.id("continue");
     public static final By FINISH_BUTTON = By.id("finish");
+    public static final By BACK_HOME_BUTTON = By.id("back-to-products");
     public static final By ERROR_MESSAGE = By.cssSelector("[data-test = error]");
 
     public CheckoutPage(WebDriver driver) {
@@ -16,6 +17,7 @@ public class CheckoutPage extends BasePage {
     }
 
     public void checkoutStepOne(String firstname, String lastname, String zipcode) {
+//        wait.until(ExpectedConditions.)
         driver.findElement(FIRSTNAME_CHECKOUT_INPUT).sendKeys(firstname);
         driver.findElement(LASTNAME_CHECKOUT_INPUT).sendKeys(lastname);
         driver.findElement(ZIP_INPUT).sendKeys(zipcode);
@@ -29,5 +31,13 @@ public class CheckoutPage extends BasePage {
     public String getErrorMessage() {
         return driver.findElement(ERROR_MESSAGE).getText();
 
+    }
+
+    public void goToFinishCheckoutPage() {
+        driver.findElement(FINISH_BUTTON).click();
+    }
+
+    public void backToHomeButton() {
+        driver.findElement(BACK_HOME_BUTTON).click();
     }
 }

@@ -1,5 +1,6 @@
 package tests;
 
+import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -14,6 +15,8 @@ public class CartTest extends BaseTest {
         cartPage.openCartPage();
         cartPage.removeFromCart("Sauce Labs Backpack");
         //TODO check that item is removed
+        boolean isError = cartPage.findRemovedFromCart("Sauce Labs Backpack");
+        Assert.assertFalse(isError, "Item was not removed");
     }
 
     @Test
@@ -24,7 +27,7 @@ public class CartTest extends BaseTest {
         cartPage.openCartPage();
         cartPage.goToCheckoutPage();
         //TODO check you are on checkout page
-//        Assert.assertTrue();
+        Assert.assertEquals(cartPage.getTitleText(), "Checkout: Your Information", "You are not on checkout page");
 
     }
 }

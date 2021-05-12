@@ -6,21 +6,21 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import pages.CartPage;
-import pages.CheckoutPage;
-import pages.LoginPage;
-import pages.ProductsPage;
+import pages.*;
 
 import java.util.concurrent.TimeUnit;
 
 public abstract class BaseTest {
     WebDriver driver;
+    WebDriverWait wait;
     LoginPage loginPage;
     ProductsPage productsPage;
     CartPage cartPage;
     CheckoutPage checkoutPage;
+    SortDropdownPage sortDropdownPage;
     public static final String USER ="standard_user";
     public static final String PASSWORD ="secret_sauce";
 
@@ -33,6 +33,7 @@ public abstract class BaseTest {
         driver = new ChromeDriver(options);
 
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);//неявные ожидания
+        wait = new WebDriverWait(driver,5);
         loginPage = new LoginPage(driver);
         productsPage = new ProductsPage(driver);
         cartPage = new CartPage(driver);

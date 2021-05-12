@@ -49,4 +49,14 @@ public class LogIn extends BaseTest{
         Assert.assertEquals(error,"Epic sadface: Sorry, this user has been locked out.",
                 "Error message is not correct");
     }
+
+    @Test
+    public void logout(){
+        loginPage.open();
+        loginPage.login(USER,PASSWORD);
+        loginPage.logout();
+        boolean isLoggedOut = driver.findElement(By.id("login-button")).isDisplayed();
+        Assert.assertTrue(isLoggedOut, "Logout failed");
+
+    }
 }
