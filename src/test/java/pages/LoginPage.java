@@ -35,3 +35,4 @@ public class LoginPage extends BasePage {
         driver.findElement(LOGOUT_LINK).click();
     }
 }
+//h2[text() = 'Convert Lead ']

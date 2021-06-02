@@ -1,10 +1,10 @@
 package tests;
 
-import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import tests.base.BaseTest;
 
-public class CheckoutTest extends BaseTest{
+public class CheckoutTest extends BaseTest {
 
     @Test
     public void successfulCheckoutStepOne(){
