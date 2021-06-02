@@ -5,7 +5,7 @@ import tests.base.BaseTest;
 
 public class ProductsTest extends BaseTest {
 
-    @Test
+    @Test()
     public void productShouldBeAddedToCart(){
         loginPage.open();
         loginPage.login(USER,PASSWORD);

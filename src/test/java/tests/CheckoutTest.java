@@ -6,7 +6,7 @@ import tests.base.BaseTest;
 
 public class CheckoutTest extends BaseTest {
 
-    @Test
+    @Test(description = "Successful checkout test")
     public void successfulCheckoutStepOne(){
         loginPage.open();
         loginPage.login(USER,PASSWORD);
@@ -18,7 +18,7 @@ public class CheckoutTest extends BaseTest {
 
     }
 
-    @Test
+    @Test(description = "Unsuccessful checkout test - first name was not provided")
     public void firstNameShouldBeProvided(){
         loginPage.open();
         loginPage.login(USER,PASSWORD);
@@ -30,7 +30,7 @@ public class CheckoutTest extends BaseTest {
 
     }
 
-    @Test
+    @Test(description = "Unsuccessful checkout test - last name was not provided")
     public void lastNameShouldBeProvided(){
         loginPage.open();
         loginPage.login(USER,PASSWORD);
@@ -42,7 +42,7 @@ public class CheckoutTest extends BaseTest {
 
     }
 
-    @Test
+    @Test(description = "Unsuccessful checkout test - zip code was not provided")
     public void zipCodeShouldBeProvided(){
         loginPage.open();
         loginPage.login(USER,PASSWORD);
@@ -54,7 +54,7 @@ public class CheckoutTest extends BaseTest {
 
     }
 
-    @Test
+    @Test (description = " Test with successful purchase made")
     public void finishThePurchase(){
         loginPage.open();
         loginPage.login(USER,PASSWORD);
