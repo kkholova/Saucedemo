@@ -2,8 +2,9 @@ package tests;
 
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
+import tests.base.BaseTest;
 
-public class Saucedemo extends BaseTest{
+public class Saucedemo extends BaseTest {
 
     @Test
     public void locators(){

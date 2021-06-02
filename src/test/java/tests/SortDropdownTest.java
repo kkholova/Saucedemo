@@ -1,13 +1,9 @@
 package tests;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
+import tests.base.BaseTest;
 
-import java.util.List;
-
-public class SortDropdownTest extends BaseTest{
+public class SortDropdownTest extends BaseTest {
 
     @Test
     public void productsAreSortedByNameFromAToZ(){
