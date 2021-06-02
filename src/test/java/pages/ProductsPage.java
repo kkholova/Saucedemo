@@ -1,5 +1,6 @@
 package pages;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -13,16 +14,19 @@ public class ProductsPage extends BasePage {
         super(driver);
     }
 
+    @Step("Add product to the cart")
     public void addToCart(String itemName) {
         driver.findElement(By.xpath(String.format(addToCartButton, itemName))).click();
 
     }
 
+    @Step("Remove product to the cart")
     public void removeItemFromProductPage(String itemName) {
         driver.findElement(By.xpath(String.format(removeFromCartProductPageButton, itemName))).click();
 
     }
 
+    @Step("Get text reflected on add/remove button")
     public String textOnAddOrRemoveButton(String itemName) {
         return driver.findElement(By.xpath(String.format(removeFromCartProductPageButton, itemName))).getText();
     }
