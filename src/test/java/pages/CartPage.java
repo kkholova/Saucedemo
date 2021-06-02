@@ -13,7 +13,7 @@ public class CartPage extends BasePage {
     public static final By ITEMPRICE = By.cssSelector(".inventory_item_price");
     public static final By ITEMNAME = By.cssSelector(".inventory_item_name");
     public static final By CHECKOUT_BUTTON = By.id("checkout");
-    public static final By TITLE_TEXT = By.id("title");
+    public static final By TITLE_TEXT = By.cssSelector(".title");
 
 
     public CartPage(WebDriver driver) {

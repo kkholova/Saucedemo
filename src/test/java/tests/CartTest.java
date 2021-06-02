@@ -27,7 +27,7 @@ public class CartTest extends BaseTest {
         cartPage.openCartPage();
         cartPage.goToCheckoutPage();
         //TODO check you are on checkout page
-        Assert.assertEquals(cartPage.getTitleText(), "Checkout: Your Information", "You are not on checkout page");
+        Assert.assertEquals(cartPage.getTitleText(), "CHECKOUT: YOUR INFORMATION", "You are not on checkout page");
 
     }
 }
