@@ -19,6 +19,7 @@
         <aspect.version>1.9.6</aspect.version>
         <alluremaven.version>2.10.0</alluremaven.version>
         <jacksomyaml>2.12.3</jacksomyaml>
+        <log4j.version>2.12.3</log4j.version>
     </properties>
 
     <build>
