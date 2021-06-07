@@ -41,7 +41,7 @@ workflows:
   periodical:
     triggers:
       - schedule:
-          cron: "0 10 * * fri"
+          cron: "0 10 * * 1"
           filters:
             branches:
               only:
