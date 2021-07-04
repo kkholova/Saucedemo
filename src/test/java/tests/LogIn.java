@@ -37,13 +37,13 @@ public class LogIn extends BaseTest {
         Assert.assertEquals(error,errorMessage, "Error message is not correct");
     }
 
-    @Test(description = "Negative tests for login - logout", dataProvider = "Login Data")
-    public void logout(){
-        loginPage.open();
-        loginPage.login(USER,PASSWORD);
-        loginPage.logout();
-        boolean isLoggedOut = driver.findElement(By.id("login-button")).isDisplayed();
-        Assert.assertTrue(isLoggedOut, "Logout failed");
-
-    }
+//    @Test(description = "Negative tests for login - logout", dataProvider = "Login Data")
+//    public void logoutFromPage(){
+//        loginPage.open();
+//        loginPage.login(USER,PASSWORD);
+//        loginPage.logout();
+//        boolean isLoggedOut = driver.findElement(By.id("login-button")).isDisplayed();
+//        Assert.assertTrue(isLoggedOut, "Logout failed");
+//
+//    }
 }
